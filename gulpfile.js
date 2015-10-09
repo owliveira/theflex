@@ -6,22 +6,33 @@ var paths = {
 	sassMain: ['src/sass/main.scss'],
 	build: 'dist'
 };
-var isDist = !!~process.argv.indexOf('--dist');
 
-gulp.task('build', function () {
+gulp.task('build-dist', function () {
 	return gulp.src(paths.sassMain)
 		.pipe(sass({
 			errLogToConsole: true,
-			outputStyle: isDist ? 'compressed' : 'nested'
+			outputStyle: 'compressed'
 		}))
 		.pipe(rename(function (path){
-			path.basename = isDist ? 'theflex.min' : 'theflex';
+			path.basename = 'theflex.min'
+		}))
+		.pipe(gulp.dest(paths.build));
+});
+
+gulp.task('build-dev', function () {
+	return gulp.src(paths.sassMain)
+		.pipe(sass({
+			errLogToConsole: true,
+			outputStyle: 'nested'
+		}))
+		.pipe(rename(function (path){
+			path.basename = 'theflex'
 		}))
 		.pipe(gulp.dest(paths.build));
 });
 
 gulp.task('sass:watch', function () {
-	gulp.watch('src/sass/*.scss', ['build'])
+	gulp.watch('src/sass/*.scss', ['build-dist', 'build-dev'])
 });
 
 gulp.task('start', ['sass:watch']);

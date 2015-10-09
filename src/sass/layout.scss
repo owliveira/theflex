@@ -14,7 +14,7 @@
   flex-wrap: wrap;
 }
 
-//Layout-align is based on "X|Y" pattern
+//Layout-align is based on "horizontal|vertical" pattern
 [layout-align="start"], [layout-align="start start"] {
   justify-content: flex-start;
   align-content: flex-start;
@@ -140,20 +140,134 @@
   align-content: space-around;
 }
 
+@for $i from 1 through 100 {
+  [flex="#{$i}"] {
+    flex: 0 0 #{$i}%;
+  }
+}
+
 //SM
-@media(max-width: $layout-breakpoint-sm) {}
+@media(max-width: $layout-breakpoint-sm) {
+  [layout-sm="row"] {
+    flex-direction: row;
+  }
+
+  [layout-sm="col"] {
+    flex-direction: column;
+  }
+
+  [layout-wrap-sm] {
+    flex-wrap: wrap;
+  }
+
+  @for $i from 1 through 100 {
+    [flex-sm="#{$i}"] {
+      flex: 0 0 #{$i}%;
+    }
+  }
+}
 
 //GT-SM
-@media(min-width: $layout-breakpoint-sm + 1) {}
+@media(min-width: $layout-breakpoint-sm + 1) {
+  [layout-gt-sm="row"] {
+    flex-direction: row;
+  }
+
+  [layout-gt-sm="col"] {
+    flex-direction: column;
+  }
+
+  [layout-wrap-gt-sm] {
+    flex-wrap: wrap;
+  }
+
+  @for $i from 1 through 100 {
+    [flex-gt-sm="#{$i}"] {
+      flex: 0 0 #{$i}%;
+    }
+  }
+}
 
 //MD
-@media(max-width: $layout-breakpoint-md) {}
+@media(max-width: $layout-breakpoint-md) {
+  [layout-md="row"] {
+    flex-direction: row;
+  }
+
+  [layout-md="col"] {
+    flex-direction: column;
+  }
+
+  [layout-wrap-md] {
+    flex-wrap: wrap;
+  }
+
+  @for $i from 1 through 100 {
+    [flex-md="#{$i}"] {
+      flex: 0 0 #{$i}%;
+    }
+  }
+}
 
 //GT-MD
-@media(min-width: $layout-breakpoint-md + 1) {}
+@media(min-width: $layout-breakpoint-md + 1) {
+  [layout-gt-md="row"] {
+    flex-direction: row;
+  }
+
+  [layout-gt-md="col"] {
+    flex-direction: column;
+  }
+
+  [layout-wrap-gt-md] {
+    flex-wrap: wrap;
+  }
+
+  @for $i from 1 through 100 {
+    [flex-gt-md="#{$i}"] {
+      flex: 0 0 #{$i}%;
+    }
+  }
+}
 
 //LG
-@media(max-width: $layout-breakpoint-lg) {}
+@media(max-width: $layout-breakpoint-lg) {
+  [layout-lg="row"] {
+    flex-direction: row;
+  }
+
+  [layout-lg="col"] {
+    flex-direction: column;
+  }
+
+  [layout-wrap-lg] {
+    flex-wrap: wrap;
+  }
+
+  @for $i from 1 through 100 {
+    [flex-lg="#{$i}"] {
+      flex: 0 0 #{$i}%;
+    }
+  }
+}
 
 //GT-LG
-@media(min-width: $layout-breakpoint-lg + 1) {}
+@media(min-width: $layout-breakpoint-lg + 1) {
+  [layout-gt-lg="row"] {
+    flex-direction: row;
+  }
+
+  [layout-gt-lg="col"] {
+    flex-direction: column;
+  }
+
+  [layout-wrap-gt-lg] {
+    flex-wrap: wrap;
+  }
+
+  @for $i from 1 through 100 {
+    [flex-gt-lg="#{$i}"] {
+      flex: 0 0 #{$i}%;
+    }
+  }
+}
