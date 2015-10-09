@@ -1,0 +1,28 @@
+{
+  "name": "theflex",
+  "version": "0.0.1",
+  "description": "A easy and fast to use responsive grid system.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renanoliver/theflex.git"
+  },
+  "keywords": [
+    "flex",
+    "responsive"
+  ],
+  "author": "Renan Oliveira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/renanoliver/theflex/issues"
+  },
+  "homepage": "https://github.com/renanoliver/theflex#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4"
+  }
+}
