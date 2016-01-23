@@ -35,4 +35,6 @@ gulp.task('sass:watch', function () {
 	gulp.watch('src/sass/*.scss', ['build-dist', 'build-dev'])
 });
 
+gulp.task('build', ['build-dist', 'build-dev']);
+
 gulp.task('start', ['sass:watch']);

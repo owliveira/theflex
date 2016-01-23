@@ -1,7 +1,7 @@
 {
   "name": "theflex",
-  "version": "0.0.1",
-  "description": "A easy and fast to use responsive grid system.",
+  "version": "1.0.0",
+  "description": "An easy and fast to use responsive grid system.",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
