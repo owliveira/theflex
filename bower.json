@@ -18,6 +18,7 @@
     "globals"
   ],
   "ignore": [
+    "gulpfile.js"
     "src",
     "*.html",
     "**/.*",
