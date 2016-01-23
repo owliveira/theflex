@@ -2,8 +2,7 @@
   "name": "theflex",
   "description": "An easy and fast to use responsive grid system.",
   "main": [
-    "dist/theflex.min.css",
-    "dist/theflex.css"
+    "theflex.css"
   ],
   "authors": [
     "Renan Oliveira"
@@ -19,6 +18,8 @@
     "globals"
   ],
   "ignore": [
+    "src",
+    "*.html",
     "**/.*",
     "node_modules",
     "bower_components",

@@ -4,7 +4,7 @@ var rename = require("gulp-rename");
 
 var paths = {
 	sassMain: ['src/sass/main.scss'],
-	build: 'dist'
+	build: ''
 };
 
 gulp.task('build-dist', function () {
